@@ -1,0 +1,1 @@
+You should have a good understanding of these concepts, particularly matrices, vectors, and derivatives
