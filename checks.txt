@@ -1,1 +1,9 @@
-You should have a good understanding of these concepts, particularly matrices, vectors, and derivatives
+Math courses:
+https://www.khanacademy.org/math/multivariable-calculus
+https://www.khanacademy.org/math/differential-equations
+https://www.khanacademy.org/math/linear-algebra
+https://www.khanacademy.org/math/statistics-probability
+https://www.3blue1brown.com/essence-of-linear-algebra-page/
+
+additional resources:
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbVhFOGJndHV5OG1JbEFMWi1qOFk1MEo5WVBLZ3xBQ3Jtc0trM29GVWRzbHJZamdVVnV3T0hCc0tjdkdxWkNURDNVbjdkTENKeE43b0FtWkFPVjc3NW1jMjBOcTFCbDJEc0EtazNxZXo3N3lSQVNoU0VnWkcwbmF6cGI3WnhZY3o0cEpsOFVrODV1eU15U1pZUHo1dw&q=https%3A%2F%2Fgithub.com%2FAssemblyAI-Examples%2FML-Study-Guide&v=wtolixa9XTg
