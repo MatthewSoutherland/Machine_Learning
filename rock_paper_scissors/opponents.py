@@ -12,7 +12,6 @@ def play(player1, player2, num_games, verbose=False):
     for _ in range(num_games):
         p1_play = player1(p2_prev_play)
         p2_play = player2(p1_prev_play)
-        print(f"p1_play: {p1_play}")
         if p1_play == p2_play:
             results["tie"] += 1
             winner = "Tie."
@@ -133,25 +132,49 @@ def human(prev_opponent_play):
                 count = len(list(reader))
 
     def play_style_zero():
-        return play
+        choices = [
+            "R",
+            "P",
+            "S",
+            "S",
+            "R",
+            "P",
+            "P",
+            "R",
+            "S",
+            "S",
+            "P",
+            "P",
+            "S",
+            "P",
+            "R",
+            "R",
+            "R",
+            "S",
+        ]
+        return choices[count % len(choices)]
 
     def play_style_one():
         if prev_opponent_play == "R":
             play = "S"
-            print("S here")
         elif prev_opponent_play == "S":
             play = "P"
-            print("P here")
         else:
             play = "R"
-            print("R here")
         return play
 
     def play_style_two():
+        if count % 3 == 0:
+            play = "P"
+        elif count % 3 == 1:
+            play = "R"
+        else:
+            play = "S"
         return play
 
     def play_style_three():
-        return play
+        choices = ["P", "S", "S", "R", "P"]
+        return choices[count % len(choices)]
 
     if count < 7:
         if count == 0:
@@ -191,7 +214,13 @@ def human(prev_opponent_play):
             style = next(reader)
 
         if style[0] == "1":
-            play_style_one()
+            play = play_style_one()
+        elif style[0] == "2":
+            play = play_style_two()
+        elif style[0] == "3":
+            play = play_style_three()
+        else:
+            play = play_style_zero()
     return play
 
 
@@ -199,4 +228,4 @@ def random_player(prev_opponent_play):
     return random.choice(["R", "P", "S"])
 
 
-play(human, kris, 30, verbose=True)
+play(human, abbey, 100, verbose=True)
